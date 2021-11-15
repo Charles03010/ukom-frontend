@@ -1,7 +1,7 @@
-##JOIN 
+## JOIN 
 - SELECT * FROM pelanggan RIGHT JOIN pesan ON pelanggan.id_pelanggan=pesan.id_pelanggan
 
-##AGREGAT
+## AGREGAT
 - SELECT {fungsi agregat} (nama_field) AS {alias} FROM {nama_table}
 - AVG = Rata-rata
 - MIN = minimum 
@@ -11,7 +11,7 @@
 - ORDER BY {field} ASC | ORDER BY {field} DESC
 - contoh SELECT SUM(stok_barang) FROM barang GROUP BY jenis_barang;
 
-##STORE PROCEDURE
+## STORE PROCEDURE
 DELIMITER $$
 CREATE PROCEDURE nama_procedure()
 BEGIN
@@ -19,7 +19,7 @@ BEGIN
 END $$
 DELIMITER ;
 
-##STORE FUNCTION
+## STORE FUNCTION
 DELIMITER $$
 CREATE FUNCTION nama_function(parameter)
 RETURN return_type
@@ -33,7 +33,7 @@ DELIMITER ;
 - INTO
 - SET variable_name = value;
 
-##TRIGGER
+## TRIGGER
 - BEFORE INSERT
 - AFTER INSERT
 - BEFORE UPDATE
@@ -50,3 +50,10 @@ BEGIN
 END$$
 DELIMITER ;
 - SHOW TRIGGER \G;
+
+
+## COMMIT ROLLBACK
+- START TRANSACTION;
+- ...
+- ROLLBACK;
+- COMMIT;
